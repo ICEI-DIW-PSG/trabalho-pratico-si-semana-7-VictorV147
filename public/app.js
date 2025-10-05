@@ -43,12 +43,11 @@ const noticias = [
   },
 ];
 
-
-  function carregarNoticias() {
+function carregarNoticias() {
   const container = document.getElementById("noticias");
-  container.innerHTML = ""; 
+  container.innerHTML = "";
 
-  noticias.forEach(noticia => {
+  noticias.forEach((noticia) => {
     container.innerHTML += `
       <div class="card m-3 p-2" style="width: 18rem;">
         <img src="${noticia.imagem}" class="card-img-top" alt="${noticia.titulo}" style="height: 200px; object-fit: cover; width: 100%;" />
@@ -61,4 +60,4 @@ const noticias = [
     `;
   });
 }
-
+document.addEventListener("DOMContentLoaded", carregarNoticias);
